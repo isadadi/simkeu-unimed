@@ -1,7 +1,6 @@
 <?php
 
 namespace app\models;
-
 use Yii;
 use yii\db\ActiveRecord;
 use app\components\MyHelper;
@@ -27,7 +26,7 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
             [['user_username'], 'string', 'max' => 25],
             [['user_password', 'user_authKey'], 'string', 'max' => 250],
             [['user_nama'], 'string', 'max' => 50],
-            [['unit_id'], 'exist', 'skipOnError' => true, 'targetClass' => SimkeuMasterUnit::className(), 'targetAttribute' => ['unit_id' => 'unit_id']],
+            [['unit_id'], 'exist', 'skipOnError' => true, 'targetClass' => admin\MasterUnit::className(), 'targetAttribute' => ['unit_id' => 'unit_id']],
         ];
     }
 

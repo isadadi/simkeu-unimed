@@ -49,10 +49,15 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
              'rules' => [
-          '<controller:(unit|user)>' => 'admin/<controller>/index',
-          '<controller:(unit|user)>/create' => 'admin/<controller>/create',
-          '<controller:(unit|user)>/<id:\d+>' => 'admin/<controller>/view',
-          '<controller:(unit|user)>/<action:(update|delete)>/<id:\d+>/' => 'admin/<controller>/<action>',
+                'pengguna' => 'admin/user/index',
+                'pengguna/create' => 'admin/user/create',
+                'pengguna/<id:\d+>' => 'admin/user/view',
+                'pengguna/<action:(update|delete)>/<id:\d+>/' => 'admin/user/<action>',
+
+                '<controller:(unit|pejabat|user)>' => 'admin/<controller>/index',
+                '<controller:(unit|pejabat)>/create' => 'admin/<controller>/create',
+                '<controller:(unit|pejabat)>/<id:\d+>' => 'admin/<controller>/view',
+                '<controller:(unit|pejabat)>/<action:(update|delete)>/<id:\d+>/' => 'admin/<controller>/<action>',
       ],
         ],
         'authManager' => [
